@@ -2,7 +2,7 @@ import type { Language } from "@/core/types";
 import JavascriptIcon from "@/assets/icons/javascript.svg";
 import PythonIcon from "@/assets/icons/python.svg";
 import JavaIcon from "@/assets/icons/java.svg";
-import CSharpeIcon from "@/assets/icons/c#.svg";
+import CSharpeIcon from "@/assets/icons/c-sharpe.svg";
 import RubyIcon from "@/assets/icons/ruby.svg";
 import PhpIcon from "@/assets/icons/php.svg";
 import SwiftIcon from "@/assets/icons/swift.svg";
