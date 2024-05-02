@@ -2,3 +2,51 @@
 .base-app {
   
 }
+
+/* Header */
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+  .header-container {
+    width: 32%;
+    padding: .8em;
+    border-radius: 1em;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    box-shadow: 0 4px 8px rgba(29, 29, 27, .1);
+    a, .logo {
+      display: grid;
+      align-items: center;
+      text-align: center;
+      color: var(--gray-500);
+      font-size: 13px;
+    }
+    // Logo
+    .logo {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      .logo-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--base-black);
+        color: var(--base-white);
+        border-radius: 1em;
+        padding: 1em;
+        width: fit-content;
+      }
+    }
+    // Link
+    a {
+      padding: .5em 1em;
+      border-radius: 12px;
+      &:hover {
+        background-color: var(--gray-50);
+        color: var(--base-black);
+      }
+    }
+  }
+}
