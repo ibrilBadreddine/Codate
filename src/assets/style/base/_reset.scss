@@ -1,0 +1,62 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+a,
+button {
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: var(--base-black);
+  transition: 0.4s;
+}
+
+input,
+textarea {
+  border: none;
+  outline: none;
+  background-color: var(--gray-50);
+  padding: 1em;
+  border-radius: 2em;
+  transition: 0.4s;
+}
+
+ul {
+  list-style: none;
+}
+
+// Base Button
+.base-button {
+  padding: 15px 24px;
+  background-color: var(--base-black);
+  color: var(--base-white);
+  border-radius: 12px;
+  border: 1px solid var(--base-black);
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.secondary-button {
+  padding: 15px 24px;
+  background-color: transparent;
+  color: var(--base-black);
+  border-radius: 12px;
+  border: 1px solid var(--base-black);
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  &:hover {
+    background-color: var(--base-black);
+    color: var(--base-white);
+  }
+}
