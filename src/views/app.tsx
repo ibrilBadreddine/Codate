@@ -1,8 +1,13 @@
+import { Route, Routes } from "react-router-dom";
+import BaseLayout from "@/views/components/layouts/BaseLayout";
+import Home from "@/views/pages/home";
 
 export default function App() {
   return (
-    <div className='main-app'>
-      Hello World
-    </div>
+    <Routes>
+      <Route path="/" element={<BaseLayout />}>
+        <Route path="" index element={<Home />} />
+      </Route>
+    </Routes>
   )
 }
