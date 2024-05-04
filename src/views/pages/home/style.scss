@@ -1,0 +1,31 @@
+/* Home Page Style */
+.home-page {
+  /* Hero */
+  .hero {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10% 0;
+    .title-box{
+      h1 {
+        font-size: 40px;
+        span {
+          background-color: var(--brand-500);
+          padding: .1em .3em;
+          border-radius: 12px;
+        }
+      }
+    }
+    .subtitle-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1em 0;
+      p {
+        width: 60%;
+        color: var(--gray-500);
+      }
+    }
+  }
+}
