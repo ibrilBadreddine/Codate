@@ -1,12 +1,14 @@
 /* Home Page Style */
 .home-page {
+  margin-bottom: 10em; // to remove
   /* Hero */
   .hero {
     display: grid;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 10% 0;
+    // margin: 10% 0;
+    margin-top: 10%;
     .title-box{
       h1 {
         font-size: 40px;
@@ -25,6 +27,155 @@
       p {
         width: 60%;
         color: var(--gray-500);
+      }
+    }
+  }
+  /* Selector */
+  .selector-container {
+    margin: 2em;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    .langs-selector {
+      background-color: var(--gray-50);
+      padding: .5em;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      .lang-btn {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        gap: .5em;
+        padding: 1em;
+        border-radius: 12px;
+        position: relative;
+        .icon {
+          width: 35px;
+          filter: grayscale(1) contrast(.5);
+          transition: .4s;
+        }
+        span {
+          color: var(--gray-500);
+          display: none;
+        }
+        &::before {
+          content: attr(data-name);
+          position: absolute;
+          translate: -50% 50%;
+          left: 50%;
+          top: -50%;
+          background-color: var(--brand-500);
+          color: var(--base-black);
+          padding: .3em 1em;
+          border-radius: 8px;
+          font-size: 13px;
+          opacity: 0;
+          visibility: hidden;
+          transition: .4s;
+        }
+        &:first-child, &:hover {
+          background-color: var(--base-white);
+          .icon {
+            filter: grayscale(0);
+          }
+        }
+        &:hover {
+          &::before {
+            visibility: visible;
+            opacity: 1;
+            top: -90%;
+          }
+        }
+      }
+    }
+  }
+  /* Formats */
+  .formats-container {
+    margin: 2em 15%;
+    display: grid;
+    // grid-template-columns: 22% 78%;
+    // grid-template-columns: 23% 54%;
+    // grid-template-columns: 20% 80%;
+    .filter-container {
+      margin: 5em 0 3em 0;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      .categories-container {
+        margin: 1em;
+        display: flex;
+        gap: .5em;
+        .category-box {
+          color: var(--gray-500);
+          background-color: var(--gray-50);
+          padding: .6em 1.5em;
+          font-size: 12px;
+          border-radius: 2em;
+          display: flex;
+          align-items: center;
+          gap: 0;
+          span {
+            transition: .3s;
+            font-size: 0px;
+          }
+        }
+        .active-category {
+          background-color: var(--brand-500);
+          color: var(--base-black);
+          gap: .5em;
+          span {
+            font-size: 17px;
+          }
+        }
+      }
+    }
+    .listing-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1em;
+      .format-box {
+        padding: 1em;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        gap: 1.5em;
+        background-color: transparent;
+        // border: 1px solid var(--gray-50);
+        .icon {
+          display: flex;
+          align-items: center;
+          padding: .7em;
+          border-radius: 10px;
+          background-color: var(--gray-50);
+          color: var(--gray-500);
+          transition: .4s;
+          span {
+            font-size: 18px;
+          }
+        }
+        .info {
+          text-align: left;
+          line-height: 1.8em;
+          p {
+            font-size: 16px;
+            color: rgb(81, 81, 81);
+          }
+          span {
+            font-size: 12px;
+            color: var(--gray-500);
+          }
+        }
+        &:hover {
+          background-color: var(--gray-50);
+          .icon {
+            background-color: var(--gray-500);
+            color: var(--gray-50);
+          }
+          // box-shadow: rgba(121, 120, 120, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+        }
       }
     }
   }
