@@ -1,14 +1,4 @@
 import type { Language } from "@/core/types";
-import JavascriptIcon from "@/assets/icons/javascript.svg";
-import PythonIcon from "@/assets/icons/python.svg";
-import JavaIcon from "@/assets/icons/java.svg";
-import CSharpeIcon from "@/assets/icons/c-sharpe.svg";
-import RubyIcon from "@/assets/icons/ruby.svg";
-import PhpIcon from "@/assets/icons/php.svg";
-import SwiftIcon from "@/assets/icons/swift.svg";
-import KotlinIcon from "@/assets/icons/kotlin.svg";
-import GoIcon from "@/assets/icons/go.svg";
-import RustIcon from "@/assets/icons/rust.svg";
 
 /**
  *
@@ -18,51 +8,51 @@ export const LANGUAGES: Language[] = [
   {
     id: "javascript",
     name: "Javascript",
-    icon: JavascriptIcon,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
   },
   {
     id: "python",
     name: "Python",
-    icon: PythonIcon,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
   },
   {
     id: "java",
     name: "Java",
-    icon: JavaIcon,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
   },
   {
     id: "c#",
     name: "C#",
-    icon: CSharpeIcon,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg",
   },
   {
     id: "ruby",
     name: "Ruby",
-    icon: RubyIcon,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ruby/ruby-plain.svg",
   },
   {
     id: "php",
     name: "Php",
-    icon: PhpIcon,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
   },
   {
     id: "swift",
     name: "Swift",
-    icon: SwiftIcon,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg",
   },
   {
     id: "kotlin",
     name: "Kotlin",
-    icon: KotlinIcon,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg",
   },
   {
     id: "go",
     name: "Go",
-    icon: GoIcon,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg",
   },
   {
     id: "rust",
     name: "Rust",
-    icon: RustIcon,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg",
   },
 ];
