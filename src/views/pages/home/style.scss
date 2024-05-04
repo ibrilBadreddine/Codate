@@ -95,9 +95,6 @@
   .formats-container {
     margin: 2em 15%;
     display: grid;
-    // grid-template-columns: 22% 78%;
-    // grid-template-columns: 23% 54%;
-    // grid-template-columns: 20% 80%;
     .filter-container {
       margin: 5em 0 3em 0;
       display: grid;
@@ -134,16 +131,16 @@
     .listing-container {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
       gap: 1em;
       .format-box {
         padding: 1em;
         border-radius: 12px;
         display: flex;
         align-items: center;
-        // justify-content: center;
         gap: 1.5em;
         background-color: transparent;
-        // border: 1px solid var(--gray-50);
+        width: 100%;
         .icon {
           display: flex;
           align-items: center;
