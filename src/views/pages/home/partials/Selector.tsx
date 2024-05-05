@@ -1,8 +1,9 @@
 import { LANGUAGES } from "@/core/data";
+import type { Language } from "@/core/types";
 
 interface SelectorProps {
-  selectedLang: string;
-  setLang: (newLang: string) => void;
+  selectedLang: Language;
+  setLang: (newLang: Language) => void;
 }
 
 export const Selector: React.FC<SelectorProps> = ({selectedLang, setLang}) => {
@@ -13,8 +14,8 @@ export const Selector: React.FC<SelectorProps> = ({selectedLang, setLang}) => {
         {LANGUAGES.map((lang) => (
           <button
             key={lang.id}
-            onClick={() => setLang(lang.id)}
-            className={selectedLang === lang.id ? "lang-btn active-lang" : "lang-btn"}
+            onClick={() => setLang(lang)}
+            className={selectedLang.id === lang.id ? "lang-btn active-lang" : "lang-btn"}
             data-name={lang.name}
           >
             <img src={lang.icon} alt={lang.name} className="icon" />

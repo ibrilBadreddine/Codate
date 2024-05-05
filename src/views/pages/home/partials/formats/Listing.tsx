@@ -1,11 +1,13 @@
 import { DATE_FORMATS } from "@/core/data";
+import type { DateFormat } from "@/core/types";
 import { AnimatePresence, motion } from "framer-motion";
 
 interface ListingProps {
   currentCategory: string;
+  setFormat: (date: DateFormat | null) => void;
 }
 
-export const Listing: React.FC<ListingProps> = ({ currentCategory }) => {
+export const Listing: React.FC<ListingProps> = ({ currentCategory, setFormat }) => {
   return (
     <motion.div layout className="listing-container">
       {DATE_FORMATS.map(
@@ -13,7 +15,7 @@ export const Listing: React.FC<ListingProps> = ({ currentCategory }) => {
           (currentCategory === date.type || currentCategory === "all") && (
             <AnimatePresence key={i}>
               <motion.div layout>
-                <button className="format-box">
+                <button onClick={() => setFormat(date)} className="format-box">
                   <div className="icon">
                     <span className="material-symbols-outlined">
                       calendar_today

@@ -1,16 +1,18 @@
 import "./style.scss";
+import { useState } from "react";
 import Hero from "./partials/Hero";
 import Selector from "./partials/Selector";
 import Formats from "./partials/formats";
-import { useState } from "react";
+import { LANGUAGES } from "@/core/data";
+import type { Language } from "@/core/types";
 
 export default function Index() {
   /**
    * 
-   * Programming language (default - "js")
+   * Handle programming language (default - "js")
    */
-  const DEFAULT_LANG = "js"; 
-  const [selectedLang, setLang] = useState<string>(DEFAULT_LANG);
+  const DEFAULT_LANG = LANGUAGES[0]; 
+  const [selectedLang, setLang] = useState<Language>(DEFAULT_LANG);
 
   return (
     <div className="home-page">
@@ -19,7 +21,9 @@ export default function Index() {
         selectedLang={selectedLang}
         setLang={setLang}
       />
-      <Formats />
+      <Formats 
+        selectedLang={selectedLang}
+      />
     </div>
   )
 }
