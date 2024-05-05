@@ -6,9 +6,10 @@ import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism";
 interface PreviewProps {
   selectedLang: Language;
   selectedFormat: DateFormat | null;
+  setFormat: (date: DateFormat | null) => void;
 }
 
-export const Preview: React.FC<PreviewProps> = ({ selectedLang, selectedFormat }) => {
+export const Preview: React.FC<PreviewProps> = ({ selectedLang, selectedFormat, setFormat }) => {
   /**
    *
    * Get function code
@@ -37,14 +38,16 @@ export const Preview: React.FC<PreviewProps> = ({ selectedLang, selectedFormat }
     borderRadius: "0 0 1em 1em",
   };
   return (
-    <div className="preview-container">
+    <div className={codeString !== "" ? "preview-container preview-show" : "preview-container"}>
       <div className="code-box">
         {/* Head */}
         <div className="code-head">
           <div className="code-control">
-            <div className="circle" />
-            <div className="circle" />
-            <div className="circle" />
+            <button onClick={() => setFormat(null)} className="circle">
+              <span className="material-symbols-outlined">close</span>
+            </button>
+            <button className="circle" />
+            <button className="circle" />
           </div>
           <div className="code-name">
             <p>do3bol.{selectedLang.id} -- ~/Randomiat</p>

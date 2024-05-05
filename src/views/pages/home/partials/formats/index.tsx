@@ -35,6 +35,7 @@ export const Formats: React.FC<FormatsProps> = ({selectedLang}) => {
       <Preview 
         selectedLang={selectedLang}
         selectedFormat={selectedFormat}
+        setFormat={setFormat}
       />
     </section>
   )
