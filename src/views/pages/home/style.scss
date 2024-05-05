@@ -75,18 +75,18 @@
           visibility: hidden;
           transition: .4s;
         }
-        &:first-child, &:hover {
-          background-color: var(--base-white);
-          .icon {
-            filter: grayscale(0);
-          }
-        }
         &:hover {
           &::before {
             visibility: visible;
             opacity: 1;
             top: -90%;
           }
+        }
+      }
+      .active-lang, .lang-btn:hover {
+        background-color: var(--base-white);
+        .icon {
+          filter: grayscale(0);
         }
       }
     }
