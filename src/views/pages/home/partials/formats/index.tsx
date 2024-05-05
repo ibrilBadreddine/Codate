@@ -2,10 +2,10 @@ import { useState } from "react";
 import Filter from "./Filter";
 import Listing from "./Listing";
 import Preview from "./Preview";
-import type { DateFormat } from "@/core/types";
+import type { DateFormat, Language } from "@/core/types";
 
 interface FormatsProps {
-  selectedLang: string;
+  selectedLang: Language;
 }
 
 export const Formats: React.FC<FormatsProps> = ({selectedLang}) => {
@@ -29,6 +29,7 @@ export const Formats: React.FC<FormatsProps> = ({selectedLang}) => {
       />
       <Listing 
         currentCategory={selectedCategory}
+        selectedFormat={selectedFormat}
         setFormat={setFormat}
       />
       <Preview 
