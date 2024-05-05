@@ -6,12 +6,12 @@ import type { Language } from "@/core/types";
  */
 export const LANGUAGES: Language[] = [
   {
-    id: "javascript",
+    id: "js",
     name: "Javascript",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
   },
   {
-    id: "python",
+    id: "py",
     name: "Python",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
   },
@@ -21,12 +21,12 @@ export const LANGUAGES: Language[] = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
   },
   {
-    id: "c#",
+    id: "cs",
     name: "C#",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg",
   },
   {
-    id: "ruby",
+    id: "rb",
     name: "Ruby",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ruby/ruby-plain.svg",
   },
@@ -41,7 +41,7 @@ export const LANGUAGES: Language[] = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg",
   },
   {
-    id: "kotlin",
+    id: "kt",
     name: "Kotlin",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg",
   },
@@ -51,7 +51,7 @@ export const LANGUAGES: Language[] = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg",
   },
   {
-    id: "rust",
+    id: "rs",
     name: "Rust",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg",
   },

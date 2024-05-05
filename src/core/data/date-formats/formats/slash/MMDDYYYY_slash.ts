@@ -6,7 +6,7 @@ import type { FunctionDefinition } from "@/core/types/date-format";
  */
 export const MMDDYYYY_slash: FunctionDefinition[] = [
   {
-    language_id: "JavaScript",
+    language_id: "js",
     function: `
   function getDateFormat() {
     const date = new Date();
@@ -20,7 +20,7 @@ export const MMDDYYYY_slash: FunctionDefinition[] = [
   `,
   },
   {
-    language_id: "Python",
+    language_id: "py",
     function: `
   import datetime
   
@@ -32,7 +32,7 @@ export const MMDDYYYY_slash: FunctionDefinition[] = [
   `,
   },
   {
-    language_id: "Java",
+    language_id: "java",
     function: `
   import java.time.LocalDate;
   import java.time.format.DateTimeFormatter;
@@ -50,7 +50,7 @@ export const MMDDYYYY_slash: FunctionDefinition[] = [
   `,
   },
   {
-    language_id: "C#",
+    language_id: "cs",
     function: `
   using System;
   
@@ -68,7 +68,7 @@ export const MMDDYYYY_slash: FunctionDefinition[] = [
   `,
   },
   {
-    language_id: "Ruby",
+    language_id: "rb",
     function: `
   def get_date_format
     date = Time.now
@@ -79,7 +79,7 @@ export const MMDDYYYY_slash: FunctionDefinition[] = [
   `,
   },
   {
-    language_id: "PHP",
+    language_id: "php",
     function: `
   <?php
   function getDateFormat() {
@@ -90,7 +90,7 @@ export const MMDDYYYY_slash: FunctionDefinition[] = [
   `,
   },
   {
-    language_id: "Swift",
+    language_id: "swift",
     function: `
   import Foundation
   
@@ -105,7 +105,7 @@ export const MMDDYYYY_slash: FunctionDefinition[] = [
   `,
   },
   {
-    language_id: "Kotlin",
+    language_id: "kt",
     function: `
   import java.time.LocalDate
   import java.time.format.DateTimeFormatter
@@ -120,7 +120,7 @@ export const MMDDYYYY_slash: FunctionDefinition[] = [
   `,
   },
   {
-    language_id: "Go",
+    language_id: "go",
     function: `
   package main
   
@@ -142,7 +142,7 @@ export const MMDDYYYY_slash: FunctionDefinition[] = [
   `,
   },
   {
-    language_id: "Rust",
+    language_id: "rs",
     function: `
   use chrono::prelude::*;
   

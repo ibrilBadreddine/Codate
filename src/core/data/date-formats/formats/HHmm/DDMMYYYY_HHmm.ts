@@ -6,7 +6,7 @@ import type { FunctionDefinition } from "@/core/types/date-format";
  */
 export const DDMMYYYY_HHmm: FunctionDefinition[] = [
   {
-    language_id: "javascript",
+    language_id: "js",
     function: `
   function getDateFormat() {
     const date = new Date();
@@ -22,7 +22,7 @@ export const DDMMYYYY_HHmm: FunctionDefinition[] = [
   `,
   },
   {
-    language_id: "python",
+    language_id: "py",
     function: `
   import datetime
   
@@ -52,7 +52,7 @@ export const DDMMYYYY_HHmm: FunctionDefinition[] = [
   `,
   },
   {
-    language_id: "csharp",
+    language_id: "cs",
     function: `
   using System;
   
@@ -70,7 +70,7 @@ export const DDMMYYYY_HHmm: FunctionDefinition[] = [
   `,
   },
   {
-    language_id: "ruby",
+    language_id: "rb",
     function: `
   def get_date_format
     date = Time.now
@@ -107,7 +107,7 @@ export const DDMMYYYY_HHmm: FunctionDefinition[] = [
   `,
   },
   {
-    language_id: "kotlin",
+    language_id: "kt",
     function: `
   import java.time.LocalDateTime
   import java.time.format.DateTimeFormatter
@@ -144,7 +144,7 @@ export const DDMMYYYY_HHmm: FunctionDefinition[] = [
   `,
   },
   {
-    language_id: "rust",
+    language_id: "rs",
     function: `
   use chrono::prelude::*;
   
