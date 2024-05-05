@@ -9,9 +9,9 @@ export const Listing: React.FC<ListingProps> = ({ currentCategory }) => {
   return (
     <motion.div layout className="listing-container">
       {DATE_FORMATS.map(
-        (date) =>
+        (date, i) =>
           (currentCategory === date.type || currentCategory === "all") && (
-            <AnimatePresence>
+            <AnimatePresence key={i}>
               <motion.div layout>
                 <button className="format-box">
                   <div className="icon">
