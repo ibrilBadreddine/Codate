@@ -44,7 +44,8 @@ export const Preview: React.FC<PreviewProps> = ({ selectedLang, selectedFormat, 
         <div className="code-head">
           <div className="code-control">
             <button onClick={() => setFormat(null)} className="circle">
-              <span className="material-symbols-outlined">close</span>
+              <span className="material-symbols-outlined">arrow_back_ios_new</span>
+              Back
             </button>
             <button className="circle" />
             <button className="circle" />

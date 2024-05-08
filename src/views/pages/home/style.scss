@@ -253,13 +253,17 @@
               cursor: pointer;
               display: flex;
               align-items: center;
-              justify-content: center;
+              gap: .2em;
+              clip-path: none;
+              width: fit-content;
+              height: fit-content;
+              padding: 0 .7em 0 .5em;
+              border-radius: 12px;
               span {
                 font-size: 13px;
-                visibility: hidden;
               }
-              &:hover span {
-                visibility: visible;
+              &:hover {
+                padding: 0 .7em 0 1.5em;
               }
             }
             &:nth-child(2) {
