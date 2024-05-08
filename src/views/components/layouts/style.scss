@@ -1,6 +1,5 @@
 // Base Layout Style
 .base-app {
-  
 }
 
 /* Header */
@@ -8,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1em;
+  padding: 1em;
   .header-container {
     width: 32%;
     padding: .8em;
@@ -16,6 +15,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     box-shadow: 0 4px 8px rgba(29, 29, 27, .1);
+    background-color: var(--base-white);
     a, .logo {
       display: grid;
       align-items: center;
