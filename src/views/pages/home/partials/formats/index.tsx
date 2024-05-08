@@ -26,6 +26,7 @@ export const Formats: React.FC<FormatsProps> = ({selectedLang}) => {
       <Filter 
         currentCategory={selectedCategory}
         setCategory={(categoryId: string) => setCategory(categoryId)}
+        setFormat={setFormat}
       />
       <Listing 
         currentCategory={selectedCategory}
