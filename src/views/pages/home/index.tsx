@@ -1,10 +1,11 @@
 import "./style.scss";
 import { useState } from "react";
+import type { Language } from "@/core/types";
 import Hero from "./partials/Hero";
 import Selector from "./partials/Selector";
 import Formats from "./partials/formats";
 import { LANGUAGES } from "@/core/data";
-import type { Language } from "@/core/types";
+import Faq from "./partials/faq/Faq";
 
 export default function Index() {
   /**
@@ -24,6 +25,7 @@ export default function Index() {
       <Formats 
         selectedLang={selectedLang}
       />
+      <Faq />
     </div>
   )
 }
