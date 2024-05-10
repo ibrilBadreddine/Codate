@@ -50,3 +50,33 @@
     }
   }
 }
+
+/* Footer */
+footer {
+  padding: 5em 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  .owner {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    .icon {
+      display: flex;
+      align-items: center;
+      padding: .7em;
+      border-radius: 12px;
+      background-color: var(--base-black);
+      color: var(--base-white);
+    }
+    p {
+      display: flex;
+      align-items: center;
+      gap: .3em;
+      a {
+        color: var(--gray-500);
+      }
+    }
+  }
+}
