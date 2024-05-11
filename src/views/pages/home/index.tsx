@@ -7,6 +7,7 @@ import Formats from "./partials/formats";
 import { LANGUAGES } from "@/core/data";
 import Faq from "./partials/faq/Faq";
 import WhyUs from "./partials/why-us/WhyUs";
+import Features from "./partials/features/Features";
 
 export default function Index() {
   /**
@@ -26,6 +27,7 @@ export default function Index() {
       <Formats 
         selectedLang={selectedLang}
       />
+      <Features />
       <WhyUs />
       <Faq />
     </div>

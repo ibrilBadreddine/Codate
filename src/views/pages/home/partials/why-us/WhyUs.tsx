@@ -5,7 +5,7 @@ export default function WhyUs() {
 
   return (
     <section className="why-us-container">
-      <div className="headlines">
+      <div className="headlines section-head">
         <div className="title">
           <h5>
             <span className="material-symbols-outlined">local_activity</span>

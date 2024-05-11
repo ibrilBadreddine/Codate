@@ -370,23 +370,6 @@
   /* Why Us */
   .why-us-container {
     margin: 5em 10%;
-    .headlines {
-      text-align: center;
-      margin: 1em;
-      .title {
-        line-height: 3em;
-        h5 {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: .5em;
-        }
-        h1 {
-          font-size: 40px;
-          line-height: 1.8em;
-        }
-      }
-    }
     .why-us-box {
       margin: 5em 0;
       display: grid;
@@ -533,4 +516,55 @@
       }
     }
   }
+  /* Features */
+  .features-container {
+    padding: 5em 10%;
+    .cards {
+      margin: 3em 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3em;
+      .card {
+        text-align: center;
+        box-shadow: rgba(123, 123, 123, 0.1) 0px 4px 12px;
+        padding: 3em;
+        border-radius: 1.5em;
+        img {
+          width: 60%;
+          filter: grayscale(1);
+          margin-bottom: 5em;
+          background-color: var(--base-white);
+          background-image:  linear-gradient(#f2f2f2 1px, transparent 1px), linear-gradient(to right, #f2f2f2 1px, #ffffff 1px);
+          background-size: 34px 34px;
+          padding: 1em;
+        }
+        .content {
+          p {
+            margin-top: 1em;
+            font-size: 14px;
+            color: var(--gray-500);
+          }
+        }
+      }
+    }
+  }
 }
+
+// -- Section Head --
+.section-head {
+  text-align: center;
+  margin: 1em;
+  .title {
+    line-height: 3em;
+    h5 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5em;
+    }
+    h1 {
+      font-size: 40px;
+      line-height: 1.8em;
+    }
+  }
+} 
