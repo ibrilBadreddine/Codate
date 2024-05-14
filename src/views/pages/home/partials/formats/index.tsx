@@ -1,43 +1,13 @@
-import { useState } from "react";
 import Filter from "./Filter";
 import Listing from "./Listing";
 import Preview from "./Preview";
-import type { DateFormat, Language } from "@/core/types";
 
-interface FormatsProps {
-  selectedLang: Language;
-}
-
-export const Formats: React.FC<FormatsProps> = ({selectedLang}) => {
-  /**
-   * 
-   * Handle categories - default ("all")
-   */
-  const [selectedCategory, setCategory] = useState<string>("all");
-
-  /**
-   * 
-   * Handle date format
-   */
-  const [selectedFormat, setFormat] = useState<DateFormat | null>(null);
-
+export const Formats = () => { 
   return (
     <section className='formats-container'>
-      <Filter 
-        currentCategory={selectedCategory}
-        setCategory={(categoryId: string) => setCategory(categoryId)}
-        setFormat={setFormat}
-      />
-      <Listing 
-        currentCategory={selectedCategory}
-        selectedFormat={selectedFormat}
-        setFormat={setFormat}
-      />
-      <Preview 
-        selectedLang={selectedLang}
-        selectedFormat={selectedFormat}
-        setFormat={setFormat}
-      />
+      <Filter />
+      <Listing />
+      <Preview />
     </section>
   )
 }

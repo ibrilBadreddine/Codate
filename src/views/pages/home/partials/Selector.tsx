@@ -1,12 +1,10 @@
+import { useStateContext } from "@/core/context/useStateContext";
 import { LANGUAGES } from "@/core/data";
-import type { Language } from "@/core/types";
 
-interface SelectorProps {
-  selectedLang: Language;
-  setLang: (newLang: Language) => void;
-}
+export const Selector = () => {
 
-export const Selector: React.FC<SelectorProps> = ({selectedLang, setLang}) => {
+  const { selectedLanguage, setLang } = useStateContext();
+
   return (
     <section className="selector-container">
       {/* Programming Languages */}
@@ -15,7 +13,7 @@ export const Selector: React.FC<SelectorProps> = ({selectedLang, setLang}) => {
           <button
             key={lang.id}
             onClick={() => setLang(lang)}
-            className={selectedLang.id === lang.id ? "lang-btn active-lang" : "lang-btn"}
+            className={selectedLanguage.id === lang.id ? "lang-btn active-lang" : "lang-btn"}
             data-name={lang.name}
           >
             <img src={lang.icon} alt={lang.name} className="icon" />

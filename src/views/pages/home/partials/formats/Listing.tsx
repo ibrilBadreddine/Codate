@@ -1,20 +1,16 @@
+import { useStateContext } from "@/core/context/useStateContext";
 import { DATE_FORMATS } from "@/core/data";
-import type { DateFormat } from "@/core/types";
 import { AnimatePresence, motion } from "framer-motion";
 
-interface ListingProps {
-  currentCategory: string;
-  selectedFormat: DateFormat | null;
-  setFormat: (date: DateFormat | null) => void;
-}
+export const Listing = () => {
+  const { selectedCategory, selectedFormat, setFormat } = useStateContext();
 
-export const Listing: React.FC<ListingProps> = ({ currentCategory, selectedFormat, setFormat }) => {
   return (
     <div className="listing-container">
       <motion.div layout className="listing-box">
         {DATE_FORMATS.map(
           (date, i) =>
-            (((currentCategory === date.type || currentCategory === "all") &&
+            (((selectedCategory === date.type || selectedCategory === "all") &&
               !selectedFormat?.format) ||
               date.format === selectedFormat?.format) && (
               <AnimatePresence key={i}>
@@ -42,7 +38,11 @@ export const Listing: React.FC<ListingProps> = ({ currentCategory, selectedForma
             )
         )}
       </motion.div>
-      <div className={selectedFormat ? "format-details active-details" : "format-details"}>
+      <div
+        className={
+          selectedFormat ? "format-details active-details" : "format-details"
+        }
+      >
         <div className="info details">
           <h3>
             <span className="material-symbols-outlined">page_info</span>
@@ -54,15 +54,15 @@ export const Listing: React.FC<ListingProps> = ({ currentCategory, selectedForma
         </div>
         <div className="info usage">
           <h3>
-            <span className="material-symbols-outlined">energy_savings_leaf</span>
+            <span className="material-symbols-outlined">
+              energy_savings_leaf
+            </span>
             Usage
           </h3>
           <ul>
-            {
-              selectedFormat?.examples.map((example, i) => (
-                <li key={i}>{example}</li>
-              ))
-            }
+            {selectedFormat?.examples.map((example, i) => (
+              <li key={i}>{example}</li>
+            ))}
           </ul>
         </div>
       </div>

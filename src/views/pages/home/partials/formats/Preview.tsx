@@ -1,15 +1,11 @@
+import { useStateContext } from "@/core/context/useStateContext";
 import { DATE_FORMATS } from "@/core/data";
-import type { DateFormat, Language } from "@/core/types";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-interface PreviewProps {
-  selectedLang: Language;
-  selectedFormat: DateFormat | null;
-  setFormat: (date: DateFormat | null) => void;
-}
+export const Preview = () => {
+  const { selectedFormat, selectedLanguage, setFormat } = useStateContext();
 
-export const Preview: React.FC<PreviewProps> = ({ selectedLang, selectedFormat, setFormat }) => {
   /**
    *
    * Get function code
@@ -17,19 +13,20 @@ export const Preview: React.FC<PreviewProps> = ({ selectedLang, selectedFormat, 
   const codeString = selectedFormat
     ? DATE_FORMATS.find(
         (date) => date.format === selectedFormat.format
-      )?.functions.find((func) => func.language_id === selectedLang.id)?.function
+      )?.functions.find((func) => func.language_id === selectedLanguage.id)
+        ?.function
     : "";
 
   /**
-   * 
+   *
    * Copy function code
    */
   const copyFunctionCode = () => {
     navigator.clipboard.writeText(codeString || "");
-  }
+  };
 
   /**
-   * 
+   *
    * Custom config
    */
   const customStyle = {
@@ -38,20 +35,28 @@ export const Preview: React.FC<PreviewProps> = ({ selectedLang, selectedFormat, 
     borderRadius: "0 0 1em 1em",
   };
   return (
-    <div className={codeString !== "" ? "preview-container preview-show" : "preview-container"}>
+    <div
+      className={
+        codeString !== ""
+          ? "preview-container preview-show"
+          : "preview-container"
+      }
+    >
       <div className="code-box">
         {/* Head */}
         <div className="code-head">
           <div className="code-control">
             <button onClick={() => setFormat(null)} className="circle">
-              <span className="material-symbols-outlined">arrow_back_ios_new</span>
+              <span className="material-symbols-outlined">
+                arrow_back_ios_new
+              </span>
               Back
             </button>
             <button className="circle" />
             <button className="circle" />
           </div>
           <div className="code-name">
-            <p>do3bol.{selectedLang.id} -- ~/Randomiat</p>
+            <p>do3bol.{selectedLanguage.id} -- ~/Randomiat</p>
           </div>
           <div className="code-actions">
             <button onClick={() => copyFunctionCode()} className="copy-action">
@@ -63,7 +68,11 @@ export const Preview: React.FC<PreviewProps> = ({ selectedLang, selectedFormat, 
         {/* Content */}
         <div className="code-content">
           <SyntaxHighlighter
-            language={selectedLang.name === "C#" ? "csharp" : selectedLang.name.toLocaleLowerCase()}
+            language={
+              selectedLanguage.name === "C#"
+                ? "csharp"
+                : selectedLanguage.name.toLocaleLowerCase()
+            }
             style={nightOwl}
             customStyle={customStyle}
             showLineNumbers

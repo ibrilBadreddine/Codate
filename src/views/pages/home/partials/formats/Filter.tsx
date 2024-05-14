@@ -1,20 +1,15 @@
+import { useStateContext } from "@/core/context/useStateContext";
 import { CATEGORIES } from "@/core/data";
 
-interface FilterProps {
-  currentCategory: string,
-  setCategory: (categoryId: string) => void,
-  setFormat: (date: null) => void;
-}
-
-export const Filter: React.FC<FilterProps> = ({currentCategory, setCategory, setFormat}) => {
+export const Filter = () => {
+  const { selectedCategory, setCategory, setFormat } = useStateContext();
 
   const handleCategory = (categoryId: string) => {
     // Set category
     setCategory(categoryId);
     // Close preview
     setFormat(null);
-  }
-
+  };
   return (
     <div className="filter-container">
       <div className="categories-container">
@@ -22,7 +17,7 @@ export const Filter: React.FC<FilterProps> = ({currentCategory, setCategory, set
           <button
             onClick={() => handleCategory(category.id)}
             className={
-              category.id === currentCategory
+              category.id === selectedCategory
                 ? "category-box active-category"
                 : "category-box"
             }
@@ -35,6 +30,6 @@ export const Filter: React.FC<FilterProps> = ({currentCategory, setCategory, set
       </div>
     </div>
   );
-}
+};
 
 export default Filter;
