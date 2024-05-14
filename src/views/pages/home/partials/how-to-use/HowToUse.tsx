@@ -18,7 +18,7 @@ export default function HowToUse() {
   
 
   return (
-    <section className="how-to-use-container">
+    <section id="how-to-use" className="how-to-use-container">
       <div className="headlines section-head">
         <div className="title">
           <h5>

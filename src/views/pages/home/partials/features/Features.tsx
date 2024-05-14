@@ -2,7 +2,7 @@ import { FeaturesData } from "./helpers";
 
 export default function Features() {
   return (
-    <section className="features-container">
+    <section id="features" className="features-container">
       <div className="headlines section-head">
         <div className="title">
           <h5>

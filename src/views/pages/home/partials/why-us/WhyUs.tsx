@@ -4,7 +4,7 @@ export default function WhyUs() {
   const numCols = [3, 4, 5];
 
   return (
-    <section className="why-us-container">
+    <section id="why-us" className="why-us-container">
       <div className="headlines section-head">
         <div className="title">
           <h5>
