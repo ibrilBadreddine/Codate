@@ -15,7 +15,7 @@ export default function Footer() {
         </p>
       </div>
       <div className="copyright">
-        <p>© {year} Fake Name All rights reserved.</p>
+        <p>© {year} Codate. All rights reserved.</p>
       </div>
     </footer>
   );
