@@ -1,11 +1,13 @@
+import Logo from "@/assets/images/light-logo.png";
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
     <footer>
       <div className="owner">
-        <div className="icon">
-          <span className="material-symbols-outlined">calendar_today</span>
+        <div className="logo">
+          <img src={Logo} alt="Codate Logo" />
         </div>
         <p>
           Developer by{" "}

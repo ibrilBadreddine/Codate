@@ -28,15 +28,11 @@
       display: grid;
       justify-content: center;
       align-items: center;
-      .logo-container{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      img {
         background-color: var(--base-black);
-        color: var(--base-white);
+        width: 40px;
         border-radius: 1em;
-        padding: 1em;
-        width: fit-content;
+        padding: .5em;
       }
     }
     // Link
@@ -62,13 +58,13 @@ footer {
     display: flex;
     align-items: center;
     gap: 1em;
-    .icon {
-      display: flex;
-      align-items: center;
-      padding: .7em;
-      border-radius: 12px;
-      background-color: var(--base-black);
-      color: var(--base-white);
+    .logo {
+      img {
+        background-color: var(--base-black);
+        width: 40px;
+        border-radius: 1em;
+        padding: .5em;
+      }
     }
     p {
       display: flex;
