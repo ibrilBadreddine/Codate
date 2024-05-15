@@ -1,0 +1,29 @@
+/* Errors */
+.error-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .error-area {
+    text-align: center;
+    .error-picture {
+      background-color: var(--base-white);
+      background-image:  linear-gradient(#f2f2f2 1px, transparent 1px), linear-gradient(to right, #f2f2f2 1px, #ffffff 1px);
+      background-size: 34px 34px;
+      img {
+        width: 350px;
+      }
+    }
+    .error-content {
+      p {
+        margin-top: .5em;
+        color: var(--gray-500);
+      }
+      .action {
+        display: flex;
+        justify-content: center;
+        margin-top: 2em;
+      }
+    }
+  }
+}
