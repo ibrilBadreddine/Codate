@@ -1,6 +1,5 @@
 /* Home Page Style */
 .home-page {
-  margin-bottom: 10em; // to remove
   /* Hero */
   .hero {
     display: grid;
@@ -8,12 +7,12 @@
     justify-content: center;
     text-align: center;
     margin-top: 8%;
-    .title-box{
+    .title-box {
       h1 {
         font-size: 40px;
         span {
           background-color: var(--brand-500);
-          padding: .1em .3em;
+          padding: 0.1em 0.3em;
           border-radius: 12px;
         }
       }
@@ -37,7 +36,7 @@
     justify-content: center;
     .langs-selector {
       background-color: var(--gray-50);
-      padding: .5em;
+      padding: 0.5em;
       border-radius: 12px;
       display: flex;
       align-items: center;
@@ -46,14 +45,14 @@
         display: flex;
         align-items: center;
         background-color: transparent;
-        gap: .5em;
+        gap: 0.5em;
         padding: 1em;
         border-radius: 12px;
         position: relative;
         .icon {
           width: 35px;
-          filter: grayscale(1) contrast(.5);
-          transition: .4s;
+          filter: grayscale(1) contrast(0.5);
+          transition: 0.4s;
         }
         span {
           color: var(--gray-500);
@@ -67,12 +66,12 @@
           top: -50%;
           background-color: var(--brand-500);
           color: var(--base-black);
-          padding: .3em 1em;
+          padding: 0.3em 1em;
           border-radius: 8px;
           font-size: 13px;
           opacity: 0;
           visibility: hidden;
-          transition: .4s;
+          transition: 0.4s;
         }
         &:hover {
           &::before {
@@ -82,7 +81,8 @@
           }
         }
       }
-      .active-lang, .lang-btn:hover {
+      .active-lang,
+      .lang-btn:hover {
         background-color: var(--base-white);
         .icon {
           filter: grayscale(0);
@@ -96,7 +96,6 @@
     display: grid;
     position: relative;
     .filter-container {
-      // margin: 5em 0 3em 0;
       margin: 3em 0 3em 0;
       display: grid;
       align-items: center;
@@ -104,25 +103,25 @@
       .categories-container {
         margin: 1em;
         display: flex;
-        gap: .5em;
+        gap: 0.5em;
         .category-box {
           color: var(--gray-500);
           background-color: var(--gray-50);
-          padding: .6em 1.5em;
+          padding: 0.6em 1.5em;
           font-size: 12px;
           border-radius: 2em;
           display: flex;
           align-items: center;
           gap: 0;
           span {
-            transition: .3s;
+            transition: 0.3s;
             font-size: 0px;
           }
         }
         .active-category {
           background-color: var(--brand-500);
           color: var(--base-black);
-          gap: .5em;
+          gap: 0.5em;
           span {
             font-size: 17px;
           }
@@ -147,11 +146,11 @@
           .icon {
             display: flex;
             align-items: center;
-            padding: .7em;
+            padding: 0.7em;
             border-radius: 10px;
             background-color: var(--gray-50);
             color: var(--gray-500);
-            transition: .4s;
+            transition: 0.4s;
             span {
               font-size: 18px;
             }
@@ -169,7 +168,8 @@
             }
           }
         }
-        .active-format, .format-box:hover {
+        .active-format,
+        .format-box:hover {
           background-color: var(--gray-50);
           .icon {
             background-color: var(--gray-500);
@@ -186,22 +186,23 @@
         gap: 1em;
         visibility: hidden;
         opacity: 0;
-        transition: .3s;
+        transition: 0.3s;
         h3 {
           font-size: 13px;
           display: flex;
           align-items: center;
-          gap: .5em;
+          gap: 0.5em;
           background-color: var(--gray-50);
           color: var(--gray-500);
-          padding: .5em 1em;
+          padding: 0.5em 1em;
           border-radius: 2em;
           width: fit-content;
           span {
             font-size: 18px;
           }
         }
-        article, ul {
+        article,
+        ul {
           padding: 1em;
           line-height: 1.8em;
           font-size: 13px;
@@ -228,7 +229,7 @@
     height: -webkit-fill-available;
     visibility: hidden;
     translate: 1.5em 0;
-    transition: .3s;
+    transition: 0.3s;
     .code-box {
       height: 100%;
       // Head
@@ -237,12 +238,12 @@
         justify-content: space-between;
         align-items: center;
         background-color: #00101e;
-        padding: .8em 1em;
+        padding: 0.8em 1em;
         border-radius: 1em 1em 0 0;
         .code-control {
           display: flex;
           align-items: center;
-          gap: .5em;
+          gap: 0.5em;
           .circle {
             width: 15px;
             height: 15px;
@@ -253,17 +254,17 @@
               cursor: pointer;
               display: flex;
               align-items: center;
-              gap: .2em;
+              gap: 0.2em;
               clip-path: none;
               width: fit-content;
               height: fit-content;
-              padding: 0 .7em 0 .5em;
+              padding: 0 0.7em 0 0.5em;
               border-radius: 12px;
               span {
                 font-size: 13px;
               }
               &:hover {
-                padding: 0 .7em 0 1.5em;
+                padding: 0 0.7em 0 1.5em;
               }
             }
             &:nth-child(2) {
@@ -282,12 +283,12 @@
           .copy-action {
             display: flex;
             align-items: center;
-            gap: .5em;
+            gap: 0.5em;
             background-color: transparent;
             color: var(--gray-500);
-            padding: .5em;
+            padding: 0.5em;
             font-size: 14px;
-            border-radius: .5em;
+            border-radius: 0.5em;
             span {
               font-size: 18px;
             }
@@ -351,7 +352,7 @@
           .answer-tab {
             display: grid;
             grid-template-rows: 0fr;
-            transition: .3s;
+            transition: 0.3s;
             border-bottom: 1px solid var(--gray-50);
             article {
               padding: 0 1.5em;
@@ -393,7 +394,8 @@
             display: flex;
             align-items: center;
             color: var(--gray-500);
-            box-shadow: rgba(145, 145, 154, 0.25) 0px 2px 5px -1px, rgba(149, 147, 147, 0.3) 0px 1px 3px -1px;
+            box-shadow: rgba(145, 145, 154, 0.25) 0px 2px 5px -1px,
+              rgba(149, 147, 147, 0.3) 0px 1px 3px -1px;
           }
         }
       }
@@ -403,11 +405,9 @@
         justify-content: center;
         background-color: var(--gray-50);
         border: 2px solid rgb(241, 241, 241);
-        // background-color: rgba(231, 77, 77, 0.1);
         border-radius: 12px;
         .weapon-box {
           width: 70%;
-          // rotate: -90deg;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -426,7 +426,7 @@
             border-radius: 4px;
             border-left: 2px solid var(--gray-500);
             border-right: 2px solid var(--gray-500);
-            &:nth-child(n+1) {
+            &:nth-child(n + 1) {
               border-bottom: 2px solid var(--gray-500);
             }
             &:nth-child(1) {
@@ -438,7 +438,7 @@
             &:nth-child(3) {
               width: 50%;
             }
-            &:nth-child(n+4) {
+            &:nth-child(n + 4) {
               width: 10%;
             }
           }
@@ -448,20 +448,21 @@
         display: grid;
         grid-template-rows: repeat(5, 1fr);
         background-color: var(--base-white);
-        background-image:  linear-gradient(#f2f2f2 1px, transparent 1px), linear-gradient(to right, #f2f2f2 1px, #ffffff 1px);
+        background-image: linear-gradient(#f2f2f2 1px, transparent 1px),
+          linear-gradient(to right, #f2f2f2 1px, #ffffff 1px);
         background-size: 38px 38px;
         position: relative;
         .enemy-box {
           position: absolute;
           display: flex;
           align-items: center;
-          gap: .5em;
-          padding: .4em 1em;
+          gap: 0.5em;
+          padding: 0.4em 1em;
           font-size: 13px;
           border-radius: 2em;
-          box-shadow: rgba(145, 145, 154, 0.25) 0px 2px 5px -1px, rgba(149, 147, 147, 0.3) 0px 1px 3px -1px;
+          box-shadow: rgba(145, 145, 154, 0.25) 0px 2px 5px -1px,
+            rgba(149, 147, 147, 0.3) 0px 1px 3px -1px;
           width: fit-content;
-          // min-width: 300px;
           height: fit-content;
           background-color: var(--base-white);
           right: 0;
@@ -475,41 +476,54 @@
           // Moves
           &:nth-child(1) {
             top: 0%;
-            animation: move-left-to-right $duration cubic-bezier(.17,.67,.83,.67) infinite;
-            animation-delay: 0s; // Start immediately
+            animation: move-left-to-right $duration
+              cubic-bezier(0.17, 0.67, 0.83, 0.67) infinite;
+            animation-delay: 0s;
           }
           &:nth-child(2) {
             top: 20%;
-            animation: move-left-to-right $duration cubic-bezier(.17,.67,.83,.67) infinite;
-            animation-delay: 0.5s; // Delay by 0.5s
+            animation: move-left-to-right $duration
+              cubic-bezier(0.17, 0.67, 0.83, 0.67) infinite;
+            animation-delay: 0.5s;
           }
           &:nth-child(3) {
             top: 45%;
-            animation: move-left-to-right $duration cubic-bezier(.17,.67,.83,.67) infinite;
-            animation-delay: 1s; // Delay by 1s
+            animation: move-left-to-right $duration
+              cubic-bezier(0.17, 0.67, 0.83, 0.67) infinite;
+            animation-delay: 1s;
           }
           &:nth-child(4) {
             bottom: 20%;
-            animation: move-left-to-right $duration cubic-bezier(.17,.67,.83,.67) infinite;
-            animation-delay: 1.5s; // Delay by 1.5s
+            animation: move-left-to-right $duration
+              cubic-bezier(0.17, 0.67, 0.83, 0.67) infinite;
+            animation-delay: 1.5s;
           }
           &:nth-child(5) {
             bottom: 0%;
-            animation: move-left-to-right $duration cubic-bezier(.17,.67,.83,.67) infinite;
-            animation-delay: 2s; // Delay by 2s
+            animation: move-left-to-right $duration
+              cubic-bezier(0.17, 0.67, 0.83, 0.67) infinite;
+            animation-delay: 2s;
           }
         }
         @keyframes move-left-to-right {
-          0% { right: 0; }
-          25% { right: 25%; }
-          50% { right: 50%; }
-          75% { right: 75%; }
-          80% { 
+          0% {
+            right: 0;
+          }
+          25% {
+            right: 25%;
+          }
+          50% {
+            right: 50%;
+          }
+          75% {
+            right: 75%;
+          }
+          80% {
             filter: none;
             visibility: visible;
             opacity: 1;
-           }
-          100% { 
+          }
+          100% {
             right: 80%;
             filter: blur(5px);
             visibility: hidden;
@@ -536,7 +550,8 @@
           width: 60%;
           margin-bottom: 5em;
           background-color: var(--base-white);
-          background-image:  linear-gradient(#f2f2f2 1px, transparent 1px), linear-gradient(to right, #f2f2f2 1px, #ffffff 1px);
+          background-image: linear-gradient(#f2f2f2 1px, transparent 1px),
+            linear-gradient(to right, #f2f2f2 1px, #ffffff 1px);
           background-size: 34px 34px;
           padding: 1em;
         }
@@ -590,7 +605,7 @@
           .step-area {
             display: grid;
             grid-template-rows: 0fr;
-            transition: .4s;
+            transition: 0.4s;
             div {
               overflow: hidden;
               h1 {
@@ -615,7 +630,8 @@
         align-items: center;
         img {
           background-color: var(--base-white);
-          background-image:  linear-gradient(#f2f2f2 1px, transparent 1px), linear-gradient(to right, #f2f2f2 1px, #ffffff 1px);
+          background-image: linear-gradient(#f2f2f2 1px, transparent 1px),
+            linear-gradient(to right, #f2f2f2 1px, #ffffff 1px);
           background-size: 34px 34px;
           width: 50%;
         }
@@ -634,11 +650,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: .5em;
+      gap: 0.5em;
     }
     h1 {
       font-size: 40px;
       line-height: 1.8em;
     }
   }
-} 
+}
