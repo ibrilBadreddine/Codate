@@ -1,5 +1,6 @@
 import { useStateContext } from "@/core/context/useStateContext";
 import { DATE_FORMATS } from "@/core/data";
+import { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism";
 
@@ -21,8 +22,15 @@ export const Preview = () => {
    *
    * Copy function code
    */
+  const [copy, setCopy] = useState<boolean>(false);
+  
   const copyFunctionCode = () => {
     navigator.clipboard.writeText(codeString || "");
+    setCopy(true);
+
+    setTimeout(() => {
+      setCopy(false);
+    }, 1000);
   };
 
   /**
@@ -60,8 +68,12 @@ export const Preview = () => {
           </div>
           <div className="code-actions">
             <button onClick={() => copyFunctionCode()} className="copy-action">
-              <span className="material-symbols-outlined">content_copy</span>
-              Copy
+              {
+                copy 
+                ? <span className="material-symbols-outlined checked">check</span>
+                : <span className="material-symbols-outlined">content_copy</span>
+              }
+              {copy ? 'Copied' : 'Copy'}
             </button>
           </div>
         </div>

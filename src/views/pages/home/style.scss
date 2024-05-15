@@ -291,6 +291,9 @@
             span {
               font-size: 18px;
             }
+            .checked {
+              color: green;
+            }
             &:hover {
               background-color: rgb(1, 34, 61);
               color: var(--base-white);
