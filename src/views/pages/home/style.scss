@@ -6,7 +6,14 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: 8%;
+    .hero-area {  
+      margin-top: 4%;
+      padding: 4em 0;
+      background-color: var(--base-white);
+      background-image: linear-gradient(#f2f2f2 1px, transparent 1px),
+        linear-gradient(to right, #f2f2f2 1px, var(--base-white) 1px);
+      background-size: 34px 34px;
+    }
     .title-box {
       h1 {
         font-size: 40px;
