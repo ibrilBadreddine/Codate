@@ -14,9 +14,11 @@ export default function Header() {
       <div className="header-container">
         <a href="#features">Features</a>
         <a href="#why-us">Why Us</a>
-        <a href="/" className="logo">
-          <img src={Logo} alt="Codate Logo" />
-        </a>
+        <div className="logo-box">
+          <a href="/" className="logo">
+            <img src={Logo} alt="Codate Logo" />
+          </a>
+        </div>
         <a href="#how-to-use">How to use</a>
         <a href="#faq">FAQ</a>
         <button onClick={() => setMenu(!menu)} className="header-toggle">

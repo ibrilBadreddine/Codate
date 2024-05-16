@@ -43,6 +43,14 @@
         color: var(--base-black);
       }
     }
+    .logo-box {
+      display: flex;
+      justify-content: center;
+      a {
+        padding: 0px;
+        width: fit-content;
+      }
+    }
     .header-toggle {
       display: none;
     }
