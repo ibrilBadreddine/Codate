@@ -32,6 +32,14 @@ ul {
   list-style: none;
 }
 
+::-moz-selection {
+  background: var(--brand-500);
+}
+
+::selection {
+  background: var(--brand-500);
+}
+
 // Base Button
 .base-button {
   padding: 15px 24px;
