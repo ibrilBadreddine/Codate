@@ -675,6 +675,12 @@
         font-size: 35px;
       }
     }
+    .selector-container {
+      .langs-selector {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
   }
 }
 
@@ -686,7 +692,22 @@
         font-size: 30px;
       }
       .subtitle-box p {
-        width: 80%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 470px) {
+  .home-page {
+    .selector-container {
+      .langs-selector {
+        gap: .5em;
+        .lang-btn{
+          .icon {
+            width: 28px;
+          }
+        }
       }
     }
   }
