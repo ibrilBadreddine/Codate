@@ -665,3 +665,29 @@
     }
   }
 }
+
+
+// Responsive
+@media (max-width: 900px) {
+  .home-page {
+    .hero .hero-area {
+      .title-box h1 {
+        font-size: 35px;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .home-page {
+    .hero .hero-area {
+      padding: 4em 1em;
+      .title-box h1 {
+        font-size: 30px;
+      }
+      .subtitle-box p {
+        width: 80%;
+      }
+    }
+  }
+}
